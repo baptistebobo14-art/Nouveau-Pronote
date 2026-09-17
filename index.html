@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MonPronote Ultimate</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="app">
+
+<!-- ========================= -->
+
+<!-- SIDEBAR -->
+
+<!-- ========================= -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<div class="logo-icon">
+
+🎓
+
+</div>
+
+<div class="logo-text">
+
+<h2>MonPronote</h2>
+
+<p>Ultimate</p>
+
+</div>
+
+</div>
+
+<nav class="menu">
+
+<button class="menu-btn active" data-page="dashboard">
+
+🏠
+
+<span>Accueil</span>
+
+</button>
+
+<button class="menu-btn" data-page="eleves">
+
+👨‍🎓
+
+<span>Élèves</span>
+
+</button>
+
+<button class="menu-btn" data-page="notes">
+
+📝
+
+<span>Notes</span>
+
+</button>
+
+<button class="menu-btn" data-page="moyennes">
+
+📊
+
+<span>Moyennes</span>
+
+</button>
+
+<button class="menu-btn" data-page="bulletin">
+
+📄
+
+<span>Bulletin</span>
+
+</button>
+
+<button class="menu-btn" data-page="cahier">
+
+📝
+
+<span>Cahier de textes</span>
+
+</button>
+
+<button class="menu-btn" data-page="a_faire">
+    📚
+    <span>Travail à faire</span>
+</button>
+
+<button class="menu-btn" data-page="vie">
+    ⚠️
+    <span>Vie scolaire</span>
+</button>
+
+<button class="menu-btn" data-page="parametres">
+    ⚙️ Paramètres
+</button>
+
+<span id="currentUserName">
+
+Non connecté
+
+</span>
+
+</nav>
+
+<div class="sidebar-bottom">
+
+<div class="version">
+
+Version
+
+<strong>V1.0</strong>
+
+</div>
+
+</div>
+
+</aside>
+
+<!-- ========================= -->
+
+<!-- CONTENU -->
+
+<!-- ========================= -->
+
+<main class="main">
+
+<header class="topbar">
+
+<div>
+
+<h1 id="pageTitle">
+
+Accueil
+
+</h1>
+
+<p id="pageSubtitle">
+
+Bienvenue sur MonPronote Ultimate.
+
+</p>
+
+</div>
+
+<div class="topbar-right">
+
+<button class="top-btn">
+
+🔔
+
+</button>
+
+<button class="top-btn">
+
+👤
+
+</button>
+
+</div>
+
+</header>
+
+<section id="content">
+
+</section>
+
+</main>
+
+</div>
+
+<!-- ========================= -->
+<!-- MODALE UNIVERSELLE -->
+<!-- ========================= -->
+
+<div id="modalOverlay" class="hidden">
+
+<div id="modalWindow">
+
+<div id="modalHeader">
+
+<h2 id="modalTitle"></h2>
+
+<button id="closeModal" onclick="closeModal()">
+
+✖
+
+</button>
+
+</div>
+
+<div id="modalBody"></div>
+
+</div>
+
+</div>
+
+<div id="modalContent">
+
+</div>
+
+<div id="modalFooter">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- CONFIRMATION -->
+<!-- ========================= -->
+
+<div id="confirmOverlay" class="hidden">
+
+<div id="confirmBox">
+
+<h2 id="confirmTitle">
+
+Confirmation
+
+</h2>
+
+<p id="confirmMessage">
+
+Êtes-vous sûr ?
+
+</p>
+
+<div class="confirm-buttons">
+
+<button id="confirmYes">
+
+✅ Oui
+
+</button>
+
+<button id="confirmNo">
+
+❌ Non
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- TOAST -->
+<!-- ========================= -->
+
+<div id="toastContainer">
+
+</div>
+
+<!-- ========================= -->
+<!-- MENU CONTEXTUEL -->
+<!-- ========================= -->
+
+<div id="contextMenu" class="hidden">
+
+</div>
+
+<!-- ========================= -->
+<!-- ÉCRAN DE CHARGEMENT -->
+<!-- ========================= -->
+
+<div id="loadingScreen" class="hidden">
+
+<div class="loading-card">
+
+<div class="loading-spinner">
+
+</div>
+
+<h2>
+
+Chargement...
+
+</h2>
+
+<p>
+
+Veuillez patienter.
+
+</p>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="script.js"></script>
+
+<div id="loginOverlay" class="login-overlay hidden">
+
+    <div class="login-box">
+
+        <h1>🏫 MonPronote Ultimate</h1>
+
+        <input
+            id="loginUser"
+            placeholder="Identifiant">
+
+        <input
+            id="loginPass"
+            type="password"
+            placeholder="Mot de passe">
+
+        <button onclick="login()">
+
+            Connexion
+
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
