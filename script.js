@@ -947,6 +947,7 @@ const NOTE_SUBJECTS = [
 "Cours annulé ⚠️",
 "Prof. absent ⚠️",
 "Vie Scolaire ⚠️",
+"Cours maintenu/REMPLACEMENT 🔵"
 "Matière Non Désignée",
 "Devoirs Faits 📚",
 "Mathématiques 🟰",
