@@ -4042,14 +4042,14 @@ function renderTravaux(){
                     </div>
 
                     ${
-                        work.description
-                        ? `
-                            <div>
-                                📖 ${work.description}
-                            </div>
-                        `
-                        : ""
-                    }
+    work.description
+    ? `
+        <div class="travail-description">
+            📖 ${work.description}
+        </div>
+    `
+    : ""
+}
 
                     <div>
                         📎 ${work.resource || "Aucune ressource"}
