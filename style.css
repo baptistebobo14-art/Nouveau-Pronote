@@ -3838,3 +3838,928 @@ cursor:pointer;
 .course-display-minimal .moved-from {
     font-size: 6px !important;
 }
+
+/* =========================================================
+   📱 MONPRONOTE — CORRECTION MOBILE GLOBALE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ==============================
+       BASE
+       ============================== */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #app {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+
+    /* ==============================
+       SIDEBAR → BARRE MOBILE
+       ============================== */
+
+    .sidebar {
+        position: fixed !important;
+
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        top: auto !important;
+
+        width: 100% !important;
+        height: 68px !important;
+        min-height: 68px !important;
+
+        z-index: 10000 !important;
+
+        padding: 5px 6px !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+
+        border-top: 1px solid #374151;
+    }
+
+
+    /* Logo inutile dans la barre du bas */
+
+    .sidebar .logo,
+    .sidebar-bottom,
+    #currentUserName {
+        display: none !important;
+    }
+
+
+    .sidebar .menu {
+        width: max-content !important;
+        min-width: 100% !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+
+        gap: 4px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    .sidebar .menu-btn {
+        min-width: 62px !important;
+        width: 62px !important;
+        height: 56px !important;
+
+        padding: 5px 3px !important;
+        margin: 0 !important;
+
+        flex-shrink: 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 2px !important;
+
+        border-radius: 9px !important;
+
+        font-size: 18px !important;
+    }
+
+
+    .sidebar .menu-btn span {
+        display: block !important;
+
+        width: 100% !important;
+
+        font-size: 8px !important;
+        line-height: 1.05 !important;
+
+        text-align: center !important;
+
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+
+    /* ==============================
+       CONTENU PRINCIPAL
+       ============================== */
+
+    .main {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin-left: 0 !important;
+
+        padding-bottom: 80px !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    #content {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding: 10px !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    /* ==============================
+       TOPBAR
+       ============================== */
+
+    .topbar {
+        width: 100% !important;
+
+        padding: 12px !important;
+
+        gap: 8px !important;
+
+        align-items: center !important;
+    }
+
+
+    .topbar h1,
+    #pageTitle {
+        font-size: 20px !important;
+        line-height: 1.15 !important;
+    }
+
+
+    #pageSubtitle {
+        font-size: 11px !important;
+        line-height: 1.25 !important;
+    }
+
+
+    .topbar-right {
+        gap: 4px !important;
+        flex-shrink: 0 !important;
+    }
+
+
+    .top-btn {
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+
+        padding: 0 !important;
+    }
+
+
+    /* ==============================
+       CARTES
+       ============================== */
+
+    .card,
+    .panel,
+    .box,
+    .dashboard-card,
+    .stat-card {
+        max-width: 100% !important;
+
+        padding: 12px !important;
+
+        overflow-wrap: anywhere;
+    }
+
+
+    .dashboard-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        gap: 10px !important;
+    }
+
+
+    /* ==============================
+       FORMULAIRES
+       ============================== */
+
+    input,
+    select,
+    textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        font-size: 16px !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    button {
+        max-width: 100%;
+    }
+
+
+    /* ==============================
+       TABLEAUX
+       ============================== */
+
+    table {
+        font-size: 11px !important;
+    }
+
+
+    .table-container,
+    .table-wrapper {
+        width: 100% !important;
+
+        overflow-x: auto !important;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    /* ==============================
+       MODALE GÉNÉRALE
+       ============================== */
+
+    #modalOverlay {
+        padding: 8px !important;
+
+        align-items: flex-start !important;
+
+        overflow-y: auto !important;
+    }
+
+
+    #modalWindow {
+        width: calc(100vw - 16px) !important;
+        max-width: calc(100vw - 16px) !important;
+
+        max-height: calc(100vh - 20px) !important;
+
+        margin: 10px auto !important;
+
+        overflow-y: auto !important;
+
+        border-radius: 12px !important;
+    }
+
+
+    #modalHeader {
+        position: sticky !important;
+        top: 0 !important;
+
+        z-index: 5;
+
+        padding: 12px !important;
+    }
+
+
+    #modalBody {
+        padding: 12px !important;
+    }
+
+
+    /* ==============================
+       CONFIRMATION
+       ============================== */
+
+    #confirmBox {
+        width: calc(100vw - 24px) !important;
+        max-width: 420px !important;
+
+        padding: 16px !important;
+    }
+
+
+    .confirm-buttons {
+        display: flex !important;
+        gap: 8px !important;
+    }
+
+
+    .confirm-buttons button {
+        flex: 1 !important;
+    }
+
+}
+
+/* =========================================================
+   📱 MOBILE 2 — EMPLOI DU TEMPS
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ============================
+       ZONE GÉNÉRALE EDT
+       ============================ */
+
+    .edt-page,
+    .emploi-page,
+    .edt-container {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* ============================
+       NAVIGATION DES SEMAINES
+       ============================ */
+
+    .edt-week-navigation,
+    .week-navigation,
+    .edt-toolbar {
+        width: 100% !important;
+
+        display: flex !important;
+        flex-wrap: wrap !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 6px !important;
+
+        margin-bottom: 10px !important;
+    }
+
+
+    .edt-week-navigation button,
+    .week-navigation button,
+    .edt-toolbar button {
+        min-height: 38px !important;
+
+        padding: 7px 10px !important;
+
+        font-size: 11px !important;
+    }
+
+
+    .edt-week-navigation select,
+    .week-navigation select,
+    .edt-toolbar select {
+        width: auto !important;
+        max-width: 100% !important;
+
+        min-height: 38px !important;
+
+        font-size: 13px !important;
+    }
+
+
+    /* ============================
+       ZONE SCROLLABLE
+       ============================ */
+
+    .edt-scroll,
+    .edt-grid-wrapper,
+    .emploi-grid-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+
+        -webkit-overflow-scrolling: touch !important;
+
+        touch-action: pan-x pan-y;
+
+        padding-bottom: 8px !important;
+    }
+
+
+    /* La grille garde une vraie largeur.
+       On la fait défiler au lieu de l'écraser. */
+
+    .pronote-grid,
+    .edt-grid {
+        min-width: 1050px !important;
+        width: 1050px !important;
+    }
+
+
+    /* ============================
+       EN-TÊTES DES JOURS
+       ============================ */
+
+    .head-day {
+        min-width: 130px !important;
+
+        padding: 6px 3px !important;
+
+        font-size: 11px !important;
+
+        text-align: center !important;
+    }
+
+
+    .head-day .edt-date {
+        display: block !important;
+
+        margin-top: 2px !important;
+
+        font-size: 9px !important;
+    }
+
+
+    /* ============================
+       COURS
+       ============================ */
+
+    .course-block-v2 {
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+
+        padding: 5px !important;
+
+        border-radius: 7px !important;
+
+        cursor: pointer;
+
+        touch-action: manipulation;
+    }
+
+
+    .course-block-v2 .course-title {
+        max-width: 100% !important;
+
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+
+        font-size: 10px !important;
+        line-height: 1.1 !important;
+    }
+
+
+    .course-block-v2 .course-status {
+        max-width: 100% !important;
+
+        font-size: 8px !important;
+        line-height: 1.05 !important;
+
+        overflow-wrap: anywhere !important;
+    }
+
+
+    .course-block-v2 .moved-from {
+        font-size: 7px !important;
+        line-height: 1.05 !important;
+    }
+
+
+    /* ============================
+       FICHE DÉTAILLÉE DU COURS
+       ============================ */
+
+    #courseDetailOverlay,
+    #rescheduleCourseOverlay {
+        padding: 6px !important;
+
+        align-items: flex-start !important;
+
+        overflow-y: auto !important;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    .course-detail-window {
+        width: calc(100vw - 12px) !important;
+        max-width: calc(100vw - 12px) !important;
+
+        max-height: calc(100dvh - 12px) !important;
+
+        margin: 6px auto !important;
+
+        overflow-y: auto !important;
+
+        border-radius: 12px !important;
+    }
+
+
+    .course-detail-header {
+        position: sticky !important;
+        top: 0 !important;
+
+        z-index: 20 !important;
+
+        padding: 12px !important;
+    }
+
+
+    .course-detail-title {
+        font-size: 17px !important;
+    }
+
+
+    .course-detail-close {
+        width: 38px !important;
+        height: 38px !important;
+
+        min-width: 38px !important;
+
+        font-size: 18px !important;
+    }
+
+
+    .course-detail-body {
+        padding: 12px !important;
+    }
+
+
+    .course-detail-item {
+        width: 100% !important;
+
+        padding: 10px !important;
+
+        gap: 8px !important;
+    }
+
+
+    /* ============================
+       ACTIONS PROF
+       ============================ */
+
+    .course-actions,
+    .course-detail-actions {
+        width: 100% !important;
+
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+
+        gap: 7px !important;
+
+        padding: 10px !important;
+    }
+
+
+    .course-actions button,
+    .course-detail-actions button {
+        width: 100% !important;
+        min-width: 0 !important;
+
+        min-height: 42px !important;
+
+        padding: 8px 5px !important;
+
+        white-space: normal !important;
+
+        font-size: 10px !important;
+        line-height: 1.15 !important;
+    }
+
+
+    /* ============================
+       FORMULAIRE CRÉATION COURS
+       ============================ */
+
+    #courseModal input,
+    #courseModal select,
+    #courseModal textarea,
+    #rescheduleCourseOverlay input,
+    #rescheduleCourseOverlay select,
+    #rescheduleCourseOverlay textarea {
+
+        width: 100% !important;
+
+        min-height: 42px !important;
+
+        font-size: 16px !important;
+    }
+
+}
+
+/* =========================================================
+   📱 MOBILE 3/3 — FINITIONS GLOBALES
+   Notes • Moyennes • Bulletins • Cahier • Travail • Vie scolaire
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ============================
+       TITRES / EN-TÊTES DE PAGES
+       ============================ */
+
+    h1 { font-size: 20px !important; }
+    h2 { font-size: 17px !important; }
+    h3 { font-size: 15px !important; }
+
+    p {
+        overflow-wrap: anywhere;
+    }
+
+
+    /* ============================
+       GRILLES → 1 COLONNE
+       ============================ */
+
+    .stats-grid,
+    .cards-grid,
+    .notes-grid,
+    .moyennes-grid,
+    .home-grid,
+    .settings-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+
+
+    /* ============================
+       FILTRES
+       ============================ */
+
+    .filters,
+    .filter-bar,
+    .filters-bar,
+    .notes-filters,
+    .moyennes-filters {
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        gap: 7px !important;
+    }
+
+    .filters > *,
+    .filter-bar > *,
+    .filters-bar > *,
+    .notes-filters > *,
+    .moyennes-filters > * {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+
+    /* ============================
+       TABLEAUX : IMPORTANT
+       ============================ */
+
+    .table-container,
+    .table-wrapper,
+    .notes-table,
+    .bulletin-table,
+    .moyennes-table {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    table {
+        min-width: 650px;
+        width: max-content;
+
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 7px !important;
+
+        font-size: 10px !important;
+
+        white-space: nowrap;
+    }
+
+
+    /* ============================
+       NOTES
+       ============================ */
+
+    .note-card,
+    .note-item,
+    .grade-card {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding: 10px !important;
+    }
+
+    .note-value,
+    .grade-value {
+        font-size: 18px !important;
+    }
+
+
+    /* ============================
+       CAHIER DE TEXTES
+       ============================ */
+
+    .cahier-item,
+    .cahier-card,
+    .course-card {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding: 11px !important;
+
+        overflow-wrap: anywhere !important;
+    }
+
+    .cahier-item button,
+    .cahier-card button {
+        min-height: 38px !important;
+    }
+
+
+    /* ============================
+       TRAVAIL À FAIRE
+       ============================ */
+
+    .homework-card,
+    .task-card,
+    .travail-card {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding: 11px !important;
+
+        overflow-wrap: anywhere !important;
+    }
+
+    .homework-card img,
+    .task-card img,
+    .travail-card img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+
+    /* ============================
+       VIE SCOLAIRE
+       ============================ */
+
+    .vie-card,
+    .absence-card,
+    .incident-card {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding: 11px !important;
+    }
+
+
+    /* ============================
+       PARAMÈTRES
+       ============================ */
+
+    .settings-card,
+    .setting-card {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding: 12px !important;
+    }
+
+
+    /* ============================
+       BOUTONS D'ACTION
+       ============================ */
+
+    .actions,
+    .action-buttons,
+    .form-actions {
+        display: flex !important;
+        flex-wrap: wrap !important;
+
+        gap: 7px !important;
+    }
+
+    .actions button,
+    .action-buttons button,
+    .form-actions button {
+        flex: 1 1 130px;
+
+        min-height: 40px !important;
+
+        white-space: normal !important;
+    }
+
+
+    /* ============================
+       LOGIN
+       ============================ */
+
+    .login-overlay {
+        padding: 12px !important;
+    }
+
+    .login-box {
+        width: 100% !important;
+        max-width: 400px !important;
+
+        padding: 20px 15px !important;
+
+        border-radius: 14px !important;
+    }
+
+    .login-box h1 {
+        font-size: 21px !important;
+        text-align: center;
+    }
+
+    .login-box input {
+        min-height: 46px !important;
+        margin-bottom: 9px !important;
+    }
+
+    .login-box button {
+        width: 100% !important;
+        min-height: 46px !important;
+    }
+
+
+    /* ============================
+       TEXTES LONGS / RESSOURCES
+       ============================ */
+
+    a,
+    .resource,
+    .description,
+    .content-text {
+        overflow-wrap: anywhere !important;
+        word-break: break-word;
+    }
+
+
+    /* ============================
+       IMAGES / MÉDIAS
+       ============================ */
+
+    img,
+    video {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /* ============================
+       TOASTS / NOTIFICATIONS
+       ============================ */
+
+    #toastContainer {
+        left: 8px !important;
+        right: 8px !important;
+        bottom: 78px !important;
+
+        width: auto !important;
+    }
+
+    .toast {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+
+    /* ============================
+       PETITS ÉCRANS
+       ============================ */
+
+    @media (max-width: 390px) {
+
+        #content {
+            padding: 7px !important;
+        }
+
+        .topbar {
+            padding: 9px !important;
+        }
+
+        #pageTitle {
+            font-size: 18px !important;
+        }
+
+        #pageSubtitle {
+            font-size: 10px !important;
+        }
+
+        .sidebar .menu-btn {
+            min-width: 58px !important;
+            width: 58px !important;
+        }
+
+    }
+
+}
