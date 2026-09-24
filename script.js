@@ -7496,6 +7496,8 @@ const left =
                     <div
     class="
         course-block-v2
+        course-display-${course._displayMode}
+
         ${
             course.status === "cancelled" ||
             course.status === "teacher_absent"
